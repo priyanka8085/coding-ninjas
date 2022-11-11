@@ -1,0 +1,47 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void keypadPrint(int num,string key[],string output)
+{
+    if(num==0)
+    {
+        cout<<output<<endl;
+        return;
+    }
+    int n=num%10;
+    
+    string value=key[n];
+    for(int i=0;i<value.length();i++)
+    {
+      
+        keypadPrint(num/10, key, value[i]+output);
+       
+       
+    }
+
+}
+
+
+
+void printKeypad(int num){
+    /*
+    Given an integer number print all the possible combinations of the keypad. You do not need to return anything just print them.
+    */
+    string key[10]={"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+    string output=" ";
+
+    keypadPrint(num,key,output);
+
+
+}
+
+int main(){
+    int num;
+    cin >> num;
+
+    printKeypad(num);
+
+    return 0;
+}
