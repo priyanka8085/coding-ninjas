@@ -1,3 +1,16 @@
+Sample Input:
+23
+Sample Output:
+ad
+ae
+af
+bd
+be
+bf
+cd
+ce
+cf
+
 
 #include<bits/stdc++.h>
 using namespace std;
